@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SSC CGL Mock Test — EXAMPREP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="test-body">
+
+<header class="test-header">
+
+    <a class="brand" href="index.html">
+        <span class="brand-mark">E</span>
+        <span>EXAMPREP</span>
+    </a>
+
+    <div class="test-title">
+        <strong>SSC CGL Mock Test 01</strong>
+        <span>Tier I · Full Length Test</span>
+    </div>
+
+    <div class="test-header-actions">
+
+        <button class="icon-btn mobile-palette-trigger" id="paletteToggle">
+            <i data-lucide="layout-grid"></i>
+        </button>
+
+        <div class="timer">
+            <i data-lucide="clock"></i>
+            <span id="timer">60:00</span>
+        </div>
+
+        <button class="btn btn-danger btn-small" id="submitTrigger">
+            Submit Test
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="test-layout">
+
+    <section class="question-workspace">
+
+        <div class="question-toolbar">
+
+            <div>
+                <span class="eyebrow">
+                    General Intelligence & Reasoning
+                </span>
+
+                <h1>
+                    Question
+                    <span id="questionNumber">1</span>
+                    of 10
+                </h1>
+            </div>
+
+            <span class="mark-chip">
+                +2 Marks · -0.50 Negative
+            </span>
+
+        </div>
+
+        <article class="question-card">
+
+            <p class="question-copy" id="questionText"></p>
+
+            <div class="answer-options" id="answerOptions"></div>
+
+        </article>
+
+
+        <div class="question-actions">
+
+            <button class="btn btn-ghost" id="previousBtn">
+                Previous
+            </button>
+
+            <button class="btn btn-ghost" id="clearBtn">
+                Clear Response
+            </button>
+
+            <button class="btn btn-review" id="reviewBtn">
+                Mark for Review & Next
+            </button>
+
+            <button class="btn btn-primary" id="nextBtn">
+                Save & Next
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <aside class="question-palette" id="questionPalette">
+
+        <div class="palette-head">
+
+            <div>
+                <strong>Question Palette</strong>
+                <span>Your progress</span>
+            </div>
+
+            <button class="icon-btn palette-close" id="paletteClose">
+                <i data-lucide="x"></i>
+            </button>
+
+        </div>
+
+
+        <div class="palette-legend">
+
+            <div>
+                <span class="legend-dot answered"></span>
+                Answered
+            </div>
+
+            <div>
+                <span class="legend-dot unanswered"></span>
+                Not Answered
+            </div>
+
+            <div>
+                <span class="legend-dot unvisited"></span>
+                Not Visited
+            </div>
+
+            <div>
+                <span class="legend-dot review"></span>
+                Review
+            </div>
+
+        </div>
+
+
+        <div class="palette-grid" id="paletteGrid"></div>
+
+        <div class="palette-progress">
+
+            <div class="between">
+
+                <span>Attempted</span>
+
+                <strong id="attemptedCount">
+                    0 / 10
+                </strong>
+
+            </div>
+
+            <div class="progress">
+
+                <span
+                    id="attemptProgress"
+                    style="width:0%">
+                </span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</main>
+
+
+<div class="modal-backdrop" id="submitModal" hidden>
+
+    <div class="modal">
+
+        <button
+            class="modal-close"
+            id="modalClose">
+            ×
+        </button>
+
+        <h2>Submit your test?</h2>
+
+        <p>
+            Review unanswered and marked questions before submitting.
+        </p>
+
+        <div class="submit-summary" id="submitSummary"></div>
+
+        <div class="modal-actions">
+
+            <button class="btn btn-ghost" id="continueTest">
+                Continue Test
+            </button>
+
+            <button class="btn btn-primary" id="confirmSubmit">
+                Submit Test
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script src="js/mock-test.js"></script>
+
+</body>
+</html>

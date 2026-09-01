@@ -1,0 +1,460 @@
+@media (max-width: 1050px) {
+
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .exam-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .course-grid,
+    .test-grid,
+    .feature-grid,
+    .material-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+    .dash-metrics {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .result-metrics {
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-trigger {
+        display: grid;
+    }
+
+    .mobile-nav {
+
+        position: fixed;
+
+        z-index: 999;
+
+        top:
+            var(--header-height);
+
+        right: 0;
+
+        bottom: 0;
+
+        left: 0;
+
+        padding: 20px;
+
+        overflow-y: auto;
+
+        background: white;
+    }
+
+    .mobile-nav.open {
+        display: block;
+    }
+
+    .mobile-nav a {
+
+        display: block;
+
+        padding:
+            14px 10px;
+
+        border-bottom:
+            1px solid
+            var(--border);
+
+        font-weight: 700;
+    }
+
+    .hero-grid,
+    .preview-grid,
+    .detail-content,
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .hero-copy p {
+        margin-inline: auto;
+    }
+
+    .hero-actions,
+    .hero-points,
+    .trust-row {
+        justify-content: center;
+    }
+
+    .hero-product {
+
+        width: min(100%,650px);
+
+        margin-inline: auto;
+    }
+
+    .side-card {
+        position: static;
+    }
+
+    .auth-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-brand {
+
+        min-height: 390px;
+
+        padding: 40px;
+    }
+
+    .dashboard-shell {
+        display: block;
+    }
+
+    .dash-sidebar {
+
+        visibility: hidden;
+
+        transform:
+            translateX(-100%);
+
+        transition:
+            var(--transition);
+    }
+
+    .dash-sidebar.open {
+
+        visibility: visible;
+
+        transform: none;
+    }
+
+    .dash-main {
+        grid-column: auto;
+    }
+
+    .dash-grid,
+    .dash-grid.equal {
+        grid-template-columns: 1fr;
+    }
+
+    .test-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .question-palette {
+
+        position: fixed;
+
+        z-index: 1000;
+
+        top: 72px;
+
+        right: 0;
+
+        bottom: 0;
+
+        width:
+            min(
+                90vw,
+                330px
+            );
+
+        visibility: hidden;
+
+        transform:
+            translateX(100%);
+
+        transition:
+            var(--transition);
+    }
+
+    .question-palette.open {
+
+        visibility: visible;
+
+        transform: none;
+    }
+
+    .palette-close,
+    .mobile-palette-trigger {
+        display: grid;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    :root {
+        --header-height: 68px;
+    }
+
+    .container {
+        width:
+            min(
+                calc(100% - 28px),
+                var(--container)
+            );
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .nav-actions
+    .btn-primary {
+        display: none;
+    }
+
+    .hero {
+
+        padding:
+            45px 0 50px;
+    }
+
+    .hero-copy h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero-actions {
+        display: grid;
+    }
+
+    .hero-actions
+    .btn {
+        width: 100%;
+    }
+
+    .hero-product {
+        min-height: 420px;
+    }
+
+    .product-window {
+
+        right: 4px;
+
+        left: 4px;
+    }
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .exam-grid,
+    .course-grid,
+    .test-grid,
+    .feature-grid,
+    .material-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-band {
+        padding: 24px 20px;
+    }
+
+    .search-shell {
+
+        display: grid;
+
+        grid-template-columns:
+            auto 1fr;
+    }
+
+    .search-shell
+    .btn {
+
+        grid-column:
+            1 / -1;
+
+        width: 100%;
+    }
+
+    .fake-metrics {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-about {
+        grid-column:
+            1 / -1;
+    }
+
+    .filter-toolbar {
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .compact-search {
+        width: 100%;
+    }
+
+    .final-cta {
+        padding: 35px 24px;
+    }
+
+    .auth-brand {
+
+        min-height: 320px;
+
+        padding: 28px 22px;
+    }
+
+    .auth-main {
+        padding: 20px 14px;
+    }
+
+    .auth-card {
+        padding: 24px 20px;
+    }
+
+    .result-metrics {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .dash-topbar {
+        padding:
+            0 14px;
+    }
+
+    .dash-search {
+        display: none;
+    }
+
+    .dash-content {
+        padding:
+            20px 14px;
+    }
+
+    .dash-welcome {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .dash-metrics {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .test-header {
+
+        height: 68px;
+
+        padding:
+            0 11px;
+
+        grid-template-columns:
+            auto 1fr;
+    }
+
+    .test-title {
+        display: none;
+    }
+
+    .test-header-actions {
+        grid-column: 2;
+    }
+
+    .question-workspace {
+        padding:
+            17px 13px;
+    }
+
+    .question-toolbar {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .question-card {
+
+        min-height: auto;
+
+        padding:
+            20px 16px;
+    }
+
+    .question-actions {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .question-actions
+    .btn:first-child {
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .hero-copy h1 {
+        font-size: 2.35rem;
+    }
+
+    .dash-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .result-metrics {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        transition-duration:
+            .01ms !important;
+    }
+
+    .reveal {
+
+        opacity: 1;
+
+        transform: none;
+    }
+}
